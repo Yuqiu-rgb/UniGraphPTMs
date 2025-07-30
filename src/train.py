@@ -16,34 +16,6 @@ torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
 
 
-
-def get_entropy(probs):
-    ent = -(probs.mean(0) * torch.log2(probs.mean(0) + 1e-12)).sum(0, keepdim=True)
-    return ent
-
-
-def get_cond_entropy(probs):
-    cond_ent = -(probs * torch.log(probs + 1e-12)).sum(1).mean(0, keepdim=True)
-    return cond_ent
-
-
-def get_val_loss(logits, label, criterion):
-    loss = criterion(logits.view(-1, parameters.num_class), label.view(-1))
-    loss = (loss.float()).mean()
-    loss = (loss - parameters.alpha).abs() + parameters.alpha
-    logits = F.softmax(logits, dim=1)  # softmax
-
-    sum_loss = loss + get_entropy(logits) - get_cond_entropy(logits)
-    return sum_loss[0]
-
-
-def get_loss(logits, label, criterion):
-    loss = criterion(logits.view(-1, parameters.num_class), label.view(-1))
-    loss = (loss.float()).mean()
-    loss = (loss - parameters.alpha).abs() + parameters.alpha
-    return loss
-
-
 def test_eval(test, test_embedding, test_labels, model):
     Result, _ = model(test, test_embedding)
     Result_softmax = F.softmax(Result, dim=1)  # Apply softmax to the output
