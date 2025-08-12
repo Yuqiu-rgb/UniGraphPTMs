@@ -55,12 +55,13 @@ Just run src/train.py to start training
 ```python
 python train.py
 ```
-
+We are actively developing the UniGraphPTMs API to facilitate researchers’ use. However, this will take some time and we will upload it as soon as it is completed.
 Note: This version of the code may be slightly complex, but it is complete and functional. We are actively refactoring the code to provide researchers with a clearer understanding of the model internals. We will upload it as soon as the refactoring is complete. However, the currently released version does not affect the use of UniGraphPTMs.
 
 ------
 **6.UniGraphPTMs-Mini**
 
-To accommodate researchers with limited computing power or non-computer science backgrounds, we have also developed UniGraphPTMs-Mini. This version replaces BHGFN with the SaGCA module and optimizes overall parameters. The SaGCA module code can be found in the '/src' directory. Since the paper is still in the review stage and the relevant code has not been refactored, We will publish the codes and weights of all UniGraphPTMs-Mini in the near future. We are actively developing the UniGraphPTMs API to facilitate researchers’ use. However, this will take some time and we will upload it as soon as it is completed.
+To accommodate researchers with limited computing power or non-computer science backgrounds, we have also developed UniGraphPTMs-Mini. This version replaces BHGFN with the SaGCA module and optimizes overall parameters. The SaGCA module code can be found in the '/src' directory. Since the paper is still in the review stage and the relevant code has not been refactored, We will publish the codes and weights of all UniGraphPTMs-Mini in the near future. 
+
 
 
