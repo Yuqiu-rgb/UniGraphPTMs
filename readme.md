@@ -48,7 +48,7 @@ Due to the size limit of uploaded files in GitHub, we will upload embeddings and
 
 ------
 
-**5.How to Run****
+**5.How to Run**
 
 Just run src/train.py to start training
 
@@ -61,3 +61,4 @@ Note: This version of the code may be slightly complex, but it is complete and f
 **6.UniGraphPTMs-Mini**
 
 To accommodate researchers with limited computing power or non-computer science backgrounds, we have also developed UniGraphPTMs-Mini. This version replaces BHGFN with the SaGCA module and optimizes overall parameters. The SaGCA module code can be found in the '/src' directory. Since the paper is still in the review stage and the relevant code has not been refactored, We will publish the codes and weights of all UniGraphPTMs-Mini in the near future. We are actively developing the UniGraphPTMs API to facilitate researchers’ use. However, this will take some time and we will upload it as soon as it is completed.
+
